@@ -67,7 +67,7 @@ authenticate() {
             sleep 2
             print_title
             return
-        elif echo "$whitelist" | grep -q '"free_trial":true,"welcome":true'; then
+        elif echo "$whitelist" | grep -q '"free_trial":false,"welcome":false'; then
             trial=true
             center "\033[36mWelcome to the MacSploit experience!\033[0m"
             echo
@@ -75,7 +75,7 @@ authenticate() {
             center "\033[32mPress enter to continue as free trial.\033[0m"
             echo
             center "\033[33mYou can purchase a license key @ https://raptor.fun/\033[0m"
-        elif echo "$whitelist" | grep -q '"free_trial":true'; then
+        elif echo "$whitelist" | grep -q '"free_trial":false'; then
             trial=true
             center "\033[36mWelcome to the MacSploit experience!\033[0m"
             echo
