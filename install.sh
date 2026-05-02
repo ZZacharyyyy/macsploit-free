@@ -57,7 +57,7 @@ authenticate() {
         echo
         center "\033[33mYou can purchase a license key @ https://raptor.fun/\033[0m"
     elif echo "$whitelist" | grep -q '"success":false'; then
-        if echo "$whitelist" | grep -q " Early Access."; then
+        if echo "$whitelist" | grep -q "Failed to Validate HWID."; then
             center "\033[36mWelcome back to the MacSploit experience, early access user!\033[0m"
             sleep 2
             print_title
